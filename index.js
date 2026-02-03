@@ -7,11 +7,7 @@ const discordUser = process.env.DISCORD_USER
 const msgDelimiter = ':'
 const messages = []
 const endpoints = {
-  zzz: 'https://sg-act-nap-api.hoyolab.com/event/luna/zzz/os/sign?act_id=e202406031448091',
-  gi:  'https://sg-hk4e-api.hoyolab.com/event/sol/sign?act_id=e202102251931481',
-  hsr: 'https://sg-public-api.hoyolab.com/event/luna/os/sign?act_id=e202303301540311',
-  hi3: 'https://sg-public-api.hoyolab.com/event/mani/sign?act_id=e202110291205111',
-  tot: 'https://sg-public-api.hoyolab.com/event/luna/os/sign?act_id=e202202281857121',
+  akef: 'https://zonai.skport.com/web/v1/game/endfield/attendance',
 }
 
 let hasErrors = false
@@ -31,7 +27,7 @@ async function run(cookie, games) {
     log('debug', `\n----- CHECKING IN FOR ${game} -----`)
 
     if (!(game in endpoints)) {
-      log('error', `Game ${game} is invalid. Available games are: zzz, gi, hsr, hi3, and tot`)
+      log('error', `Game ${game} is invalid. Available games are: akef`)
       continue
     }
 
